@@ -184,7 +184,7 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--primary-bg-color);
+  /* background-color: var(--primary-bg-color); */
   text-align: center;
 }
 
@@ -329,6 +329,19 @@ img {
   color: var(--text-color);
 }
 
+/* Social icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+}
+
 /* Футер */
 .footer {
   padding-top: 60px;
@@ -452,4 +465,23 @@ img {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+/* Overlay */
+.overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 1px solid black; */
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/overlay.jpg");
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
