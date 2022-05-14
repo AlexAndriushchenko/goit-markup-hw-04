@@ -180,6 +180,11 @@ img {
   color: var(--accent-color);
 }
 
+.studio-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 /* hero */
 .hero {
   padding-top: 200px;
@@ -213,12 +218,31 @@ img {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
   padding: 10px 32px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+/* Overlay */
+.overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/overlay.jpg");
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Преимущества */
@@ -252,6 +276,21 @@ img {
 .advantages-text {
   line-height: 1.71;
   color: var(--text-color);
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.pictures-icon {
 }
 
 /* Чем мы занимаемся */
@@ -323,10 +362,28 @@ img {
 }
 
 .team-text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   color: var(--text-color);
+}
+
+/* Постоянные клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: var(--primary-text-color);
 }
 
 /* Social icons */
@@ -337,9 +394,64 @@ img {
 }
 
 .socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
+  color: #afb1b8;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* Clients icons */
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: #ff6c00;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* Футер */
@@ -374,6 +486,52 @@ img {
   color: var(--contact-color);
   text-decoration: none;
   font-style: normal;
+}
+
+.footer > .container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.socials-title {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.footer > .container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-address-container {
+  margin-right: 70px;
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-linkfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.socials-linkfooter:hover,
+.socials-linkfooter:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 
 /* Portfolio */
@@ -412,7 +570,10 @@ img {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-active {
@@ -429,7 +590,14 @@ img {
 }
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item {
@@ -465,23 +633,4 @@ img {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
-}
-
-/* Overlay */
-.overlay {
-  max-width: 1600px;
-  min-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  /* outline: 1px solid black; */
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/overlay.jpg");
-  background-color: #c4c4c4;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
